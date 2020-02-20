@@ -11,7 +11,7 @@ import { InventaryModule } from './inventary/inventary.module';
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql',
     }),
-    MongooseModule.forRoot('mongodb+srv://lfaitanin:faitanin123@cluster0-bauev.azure.mongodb.net/test?retryWrites=true&w=majority'),
+    MongooseModule.forRoot(process.env.URI_MONGO),
   ],
   controllers: [AppController],
   providers: [AppService],
